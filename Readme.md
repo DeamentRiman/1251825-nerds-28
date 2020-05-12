@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Svetlana Valdaeva](https://up.htmlacademy.ru/htmlcss/28/user/1251825).
-* Наставник: `Неизвестно`.
+* Наставник: `None`.
 
 ---
 
