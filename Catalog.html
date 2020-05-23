@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+
   </head>
   <body>
 
@@ -11,7 +13,7 @@
       <nav>
         <img src="img/nerds-logo.svg" width="160" heigth="65" alt="Логотип Нёрдс">
         <ul>
-          <li><a href="#">Студия</a></li>
+          <li><a href="index.html">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
           <li><a href="#">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
@@ -23,8 +25,45 @@
     
     <main>
       <section>
-        <h2>Форма</h2>
-        <!--Форма-->
+        <h2 class="visually-hidden">Форма</h2>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Стоимость:</legend>
+            <div>
+              <label for="min_rating"></label>
+              <input type="range" multiple min="0" max="15000" step="1" id="rating" value="15000">
+            </div>
+            <span>От</span>
+            <input type="text" name="min_value_number" placeholder="0">
+            <span>До</span>
+            <input type="text" name="max_value_number" placeholder="15000">
+          </fieldset>
+
+          <fieldset>
+            <legend>Сетка:</legend>
+            <input type="radio" name="type_of_product" value="adaptive" id="net">
+            <label for="net">Адаптивная</label>
+            <input type="radio" name="type_of_product" value="fixed" id="net" checked>
+            <label for="net">Фиксированная</label>
+            <input type="radio" name="type_of_product" value="rubber" id="net">
+            <label for="net">Резиновая</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Особенности:</legend>
+            <input type="checkbox" name="type_of_features" id="slider" checked>
+            <label for="slider">Слайдер</label>
+            <input type="checkbox" name="type_of_plus" id="plus">
+            <label for="plus">Блок преимуществ</label>
+            <input type="checkbox" name="type_of_news" id="news" checked>
+            <label for="news">Новости</label>
+            <input type="checkbox" name="type_of_gallery" id="gallery">
+            <label for="gallery">Галерея</label>
+            <input type="checkbox" name="type_of_basket" id="basket">
+            <label for="basket">Корзина</label>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
       <section>
         <h2>Сортировка</h2>
@@ -35,7 +74,7 @@
         <!--кнопки-->
       </section>
       <section>
-        <h2>Каталог</h2>
+        <h2 class="visually-hidden">Каталог</h2>
         <ul>
           <li>
             <img src="img/Goods1.jpg" width="360" heigth="580" alt="Сайт Седона">
@@ -67,9 +106,9 @@
 
     <footer>
       <section>
-        <h2>Как нас найти</h2>
+        <h2 class="visually-hidden">Как нас найти</h2>
         <!--Карта-->
-        <img src="img/map 1.jpg" width="1440" heigth="416" alt="Карта">
+        <img src="img/map 1.jpg" width="1440" heigth="416" alt="Местоположение офиса Nerds на карте">
         <div>
           <p>Nerds design studio</p>
           <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
@@ -82,7 +121,7 @@
         </div>
       </section>
       <section>
-        <h2>Странички в соц сетях</h2>
+        <h2 class="visually-hidden">Странички в соц сетях</h2>
         <ul>
           <li>
             <img src="img/Vk_logo.svg" width="26" height="15" alt="Nerds в Контакте">
@@ -102,9 +141,24 @@
       </section>
     </footer>
     <section>
-      <h2>Напишите нам</h2>
-      <!--Форма-->
-      <button type="button">Отправить</button>
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <h2>Напишите нам</h2>
+        <button type="button">Закрыть</button>
+        <p>
+          <label for="write_us_name">Ваше имя:</label>
+          <input id="wtire_us_name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="write_us_email">Ваш e-mail:</label>
+          <input id="wtire_us_email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="write_us_text">Текст письма:</label>
+          <input id="wtire_us_email" type="text" name="write_text" placeholder="В свободной форме">
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
     </section>
   </body>
 </html>
