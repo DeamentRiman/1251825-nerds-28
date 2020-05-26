@@ -3,36 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    
+    <link rel="stylesheet" href="../1251825-nerds-28/css/Style.css">
+    <link rel="stylesheet" href="../1251825-nerds-28/css/normalize.css">
 
   </head>
   <body>
 
     <header>
       <nav>
-        <img src="img/nerds-logo.svg" width="160" heigth="65" alt="Логотип Нёрдс">
+        <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
         <ul>
           <li><a href="index.html">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
           <li><a href="#">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-        <a href="#"><img src="img/cart-icon.svg" width="15" heigth="15" alt="Корзина">Корзина</a>
+        <a href="#"><img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">Корзина</a>
        </nav>
-       <p>Магазин готовых шаблонов</p>
     </header>
+       
+    
     
     <main>
+      <p>Магазин готовых шаблонов</p>
       <section>
         <h2 class="visually-hidden">Форма</h2>
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Стоимость:</legend>
+
             <div>
               <label for="min_rating"></label>
-              <input type="range" multiple min="0" max="15000" step="1" id="rating" value="15000">
+              <input type="range" min="0" max="15000" step="1" id="rating" value="15000">
             </div>
+
             <span>От</span>
             <input type="text" name="min_value_number" placeholder="0">
             <span>До</span>
@@ -41,12 +46,12 @@
 
           <fieldset>
             <legend>Сетка:</legend>
-            <input type="radio" name="type_of_product" value="adaptive" id="net">
-            <label for="net">Адаптивная</label>
-            <input type="radio" name="type_of_product" value="fixed" id="net" checked>
-            <label for="net">Фиксированная</label>
-            <input type="radio" name="type_of_product" value="rubber" id="net">
-            <label for="net">Резиновая</label>
+            <input type="radio" name="type_of_product" value="adaptive" id="net1">
+            <label for="net1">Адаптивная</label>
+            <input type="radio" name="type_of_product" value="fixed" id="net1" checked>
+            <label for="net1">Фиксированная</label>
+            <input type="radio" name="type_of_product" value="rubber" id="net1">
+            <label for="net1">Резиновая</label>
           </fieldset>
 
           <fieldset>
@@ -71,28 +76,29 @@
         <span>По цене</span>
         <span>По типу</span>
         <span>По названию</span>
+        
         <!--кнопки-->
       </section>
       <section>
         <h2 class="visually-hidden">Каталог</h2>
         <ul>
           <li>
-            <img src="img/Goods1.jpg" width="360" heigth="580" alt="Сайт Седона">
+            <img src="img/Goods1.jpg" width="360" height="580" alt="Сайт Седона">
           </li>
           <li>
-            <img src="img/Goods2.jpg" width="358" heigth="578" alt="Сайт Pink">
+            <img src="img/Goods2.jpg" width="358" height="578" alt="Сайт Pink">
           </li>
           <li>
-            <img src="img/Goods3.jpg" width="358" heigth="578" alt="Сайт Барбершоп">
+            <img src="img/Goods3.jpg" width="358" height="578" alt="Сайт Барбершоп">
           </li>
           <li>
-            <img src="img/Goods4.jpg" width="358" heigth="578" alt="Сайт Mishka">
+            <img src="img/Goods4.jpg" width="358" height="578" alt="Сайт Mishka">
           </li>
           <li>
-            <img src="img/Goods5.jpg" width="358" heigth="578" alt="Сайт для обучения">
+            <img src="img/Goods5.jpg" width="358" height="578" alt="Сайт для обучения">
           </li>
           <li>
-            <img src="img/Goods6.jpg" width="358" heigth="578" alt="Сайт компании Кваст">
+            <img src="img/Goods6.jpg" width="358" height="578" alt="Сайт компании Кваст">
           </li>
         </ul>
         <ul>
@@ -108,7 +114,7 @@
       <section>
         <h2 class="visually-hidden">Как нас найти</h2>
         <!--Карта-->
-        <img src="img/map 1.jpg" width="1440" heigth="416" alt="Местоположение офиса Nerds на карте">
+        <img src="img/map1.jpg" width="1440" height="416" alt="Местоположение офиса Nerds на карте">
         <div>
           <p>Nerds design studio</p>
           <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
@@ -140,6 +146,7 @@
         <p>Скидка 10% для друзей из социальных сетей.</p>
       </section>
     </footer>
+   
     <section>
       <h2 class="visually-hidden">Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
@@ -147,15 +154,15 @@
         <button type="button">Закрыть</button>
         <p>
           <label for="write_us_name">Ваше имя:</label>
-          <input id="wtire_us_name" type="text" name="name" placeholder="Имя Фамилия">
+          <input id="write_us_name" type="text" name="name" placeholder="Имя Фамилия">
         </p>
         <p>
           <label for="write_us_email">Ваш e-mail:</label>
-          <input id="wtire_us_email" type="email" name="email" placeholder="email@example.com">
+          <input id="write_us_email" type="email" name="email" placeholder="email@example.com">
         </p>
         <p>
           <label for="write_us_text">Текст письма:</label>
-          <input id="wtire_us_email" type="text" name="write_text" placeholder="В свободной форме">
+          <input id="write_us_text" type="text" name="write_text" placeholder="В свободной форме">
         </p>
         <button type="submit">Отправить</button>
       </form>
