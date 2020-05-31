@@ -3,109 +3,163 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../1251825-nerds-28/css/Style.css">
-    <link rel="stylesheet" href="../1251825-nerds-28/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="../1251825-nerds-28/css/Style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../1251825-nerds-28/css/normalize.css" >
 
   </head>
   <body>
 
-    <header>
-      <nav>
-        <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
-        <ul>
+    <header class="main-header container-size">
+      <nav class="main-navigation">
+        <a class="main-header-logo">
+          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
+        </a>
+        <div class="container">
+        <ul class="site-navigation">
           <li><a href="index.html">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
           <li><a href="#">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-        <a href="#"><img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">Корзина</a>
+        <div class="user-navigation">
+          <a class="login-link" href="login.html"><img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">Корзина</a>
+        </div>
        </nav>
     </header>
-       
-    
-    
+
     <main>
-      <p>Магазин готовых шаблонов</p>
+      <p class="slider-big catalog_title">Магазин готовых шаблонов</p>
       <section>
         <h2 class="visually-hidden">Форма</h2>
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
-            <legend>Стоимость:</legend>
+            <legend class="filter_text">Стоимость:</legend>
 
-            <div>
+            <div class="price_filter">
               <label for="min_rating"></label>
               <input type="range" min="0" max="15000" step="1" id="rating" value="15000">
             </div>
 
-            <span>От</span>
-            <input type="text" name="min_value_number" placeholder="0">
-            <span>До</span>
-            <input type="text" name="max_value_number" placeholder="15000">
+            <span class="filter_range">От</span>
+            <input class="filter_input" type="text" name="min_value_number" placeholder="0">
+            <span class="filter_range">До</span>
+            <input class="filter_input" type="text" name="max_value_number" placeholder="15000">
           </fieldset>
 
           <fieldset>
-            <legend>Сетка:</legend>
+            <legend class="filter_text">Сетка:</legend>
             <input type="radio" name="type_of_product" value="adaptive" id="net1">
-            <label for="net1">Адаптивная</label>
+            <label class="filter_option" for="net1">Адаптивная</label>
             <input type="radio" name="type_of_product" value="fixed" id="net1" checked>
-            <label for="net1">Фиксированная</label>
+            <label class="filter_option"for="net1">Фиксированная</label>
             <input type="radio" name="type_of_product" value="rubber" id="net1">
-            <label for="net1">Резиновая</label>
+            <label class="filter_option" for="net1">Резиновая</label>
           </fieldset>
 
           <fieldset>
-            <legend>Особенности:</legend>
+            <legend class="filter_text">Особенности:</legend>
             <input type="checkbox" name="type_of_features" id="slider" checked>
-            <label for="slider">Слайдер</label>
+            <label class="filter_option" class="filter_option" for="slider">Слайдер</label>
             <input type="checkbox" name="type_of_plus" id="plus">
-            <label for="plus">Блок преимуществ</label>
+            <label class="filter_option" for="plus">Блок преимуществ</label>
             <input type="checkbox" name="type_of_news" id="news" checked>
-            <label for="news">Новости</label>
+            <label class="filter_option" for="news">Новости</label>
             <input type="checkbox" name="type_of_gallery" id="gallery">
-            <label for="gallery">Галерея</label>
+            <label class="filter_option" for="gallery">Галерея</label>
             <input type="checkbox" name="type_of_basket" id="basket">
-            <label for="basket">Корзина</label>
+            <label class="filter_option" for="basket">Корзина</label>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="filter_button button_text" type="submit">Показать</button>
         </form>
       </section>
       <section>
-        <h2>Сортировка</h2>
-        <span>Соритровать:</span>
-        <span>По цене</span>
-        <span>По типу</span>
-        <span>По названию</span>
-        
+        <h2 class="visually-hidden">Сортировка</h2>
+        <span class="filter_text">Сортировать:</span>
+        <ul>
+          <li>
+            <a class="sorting_system" href="#">По цене</a>
+          </li>
+          <li>
+            <a class="sorting_system" href="#">По типу</a>
+          </li>
+          <li>
+            <a class="sorting_system" href="#">По названию</a>
+          </li>
+        </ul>
+       
         <!--кнопки-->
       </section>
       <section>
         <h2 class="visually-hidden">Каталог</h2>
         <ul>
-          <li>
-            <img src="img/Goods1.jpg" width="360" height="580" alt="Сайт Седона">
+          <li class="good">
+            <a href="#">
+              <img src="img/Goods1.jpg" width="360" height="580" alt="Сайт Седона">
+            </a>
+            <div class="card">
+              <p class="filter_text">Sedona</p>
+              <p class="card_content">Информационный сайт для туристов</p>
+              <a class="gb_properties price_button" href="#">9900 &#8381;</a>
+            </div>
           </li>
           <li>
-            <img src="img/Goods2.jpg" width="358" height="578" alt="Сайт Pink">
+            <a href="#">
+              <img src="img/Goods2.jpg" width="358" height="578" alt="Сайт Pink">
+          </a>
+          <div class="card">
+            <p class="filter_text">Pink app</p>
+            <p class="card_content">Продуктовый ленинг приложения для iOS и Android</p>
+            <a class="gb_properties price_button" href="#">9900 &#8381;</a>
+          </div>
           </li>
           <li>
-            <img src="img/Goods3.jpg" width="358" height="578" alt="Сайт Барбершоп">
+            <a href="#">
+              <img src="img/Goods3.jpg" width="358" height="578" alt="Сайт Барбершоп">
+            </a>
+            <div class="card">
+              <p class="filter_text">Barbershop</p>
+              <p class="card_content">Сайт салона красоты для мужчин</p>
+              <a class="gb_properties price_button" href="#">9900 &#8381;</a>
+            </div>
           </li>
           <li>
-            <img src="img/Goods4.jpg" width="358" height="578" alt="Сайт Mishka">
+            <a href="#">
+              <img src="img/Goods4.jpg" width="358" height="578" alt="Сайт Mishka">
+            </a>
+            <div class="card">
+              <p class="filter_text">Mishka</p>
+              <p class="card_content">Интернет-магазин вязанных изделий ручной работы</p>
+              <a class="gb_properties price_button" href="#">9900 &#8381;</a>
+            </div>
           </li>
           <li>
-            <img src="img/Goods5.jpg" width="358" height="578" alt="Сайт для обучения">
+            <a href="#">
+              <img src="img/Goods5.jpg" width="358" height="578" alt="Сайт для обучения">
+            </a>
+            <div class="card">
+              <p class="filter_text">A plus</p>
+              <p class="card_content">Лендинг курсов повышения квалификации</p>
+              <a class="gb_properties price_button" href="#">9900 &#8381;</a>
+            </div>
+            </li>
           </li>
           <li>
-            <img src="img/Goods6.jpg" width="358" height="578" alt="Сайт компании Кваст">
+            <a href="#">
+              <img src="img/Goods6.jpg" width="358" height="578" alt="Сайт компании Кваст">
+            </a>
+            <div class="card">
+              <p class="filter_text">Кваст</p>
+              <p class="card_content">Интернет-магазин крафтового кваса</p>
+              <a class="gb_properties price_button" href="#">9900 &#8381;</a>
+            </div>
           </li>
         </ul>
         <ul>
-          <li><a>1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">Следующая</a></li>
+          <li><a class="active_page">1</a></li>
+          <li><a class="page_number" href="#">2</a></li>
+          <li><a class="page_number" href="#">3</a></li>
+          <li><a class="filter_button button_text" href="#">Следующая</a></li>
         </ul>
       </section>
     </main>
@@ -114,12 +168,12 @@
       <section>
         <h2 class="visually-hidden">Как нас найти</h2>
         <!--Карта-->
-        <img src="img/map1.jpg" width="1440" height="416" alt="Местоположение офиса Nerds на карте">
+        <img src="img/map1.jpg" width="1440" height="416" alt="Карта">
         <div>
-          <p>Nerds design studio</p>
-          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+          <p class="map_card_header">Nerds design studio</p>
+          <p class="card_text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
           тел. +7(812)275-75-75</p>
-          <button type="button">Напишите нам</button>
+          <button class="map_button" type="button">Напишите нам</button>
           <!--
             Псевдоэлемент
             <img src="img/map-marker1.svg" width="231" heigth="190" alt="расположение офиса Nerds на карте">
@@ -129,42 +183,45 @@
       <section>
         <h2 class="visually-hidden">Странички в соц сетях</h2>
         <ul>
-          <li>
-            <img src="img/Vk_logo.svg" width="26" height="15" alt="Nerds в Контакте">
-            <span>Vk</span>
+          <li class="logo_background logo-vk">
+            <a href="#">
+              <span class="visually-hidden">Vk</span>
+            </a>
           </li>
-          <li>
-            <img src="img/f_logo.svg" width="12" height="22" alt="Nerds на Фэйсбук">
-            <span>F</span>
+          <li class="logo_background logo-f">
+            <a href="#">
+              <span class="visually-hidden">F</span>
+            </a>
           </li>
-          <li>
-            <img src="img/insta-logo.svg" width="21" height="21" alt="Nerds В Instagram">
-            <span>I</span>
-          </li>
+          <li class="logo_background logo-i">
+            <a href="#">
+              <span class="visually-hidden">I</span>
+            </a>
+            </li>
         </ul>
-        <p>Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <p class="friendship">Давайте дружить, это выгодно!</p>
+        <p class="friendship_content">Скидка 10% для друзей из социальных сетей.</p>
       </section>
     </footer>
    
     <section>
       <h2 class="visually-hidden">Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <h2>Напишите нам</h2>
-        <button type="button">Закрыть</button>
+        <h2 class="popup_header">Напишите нам</h2>
+        <button class="popup_close" type="button"></button>
         <p>
-          <label for="write_us_name">Ваше имя:</label>
-          <input id="write_us_name" type="text" name="name" placeholder="Имя Фамилия">
+          <label class="popup_text" for="write_us_name">Ваше имя:</label>
+          <input class="input_style" id="write_us_name" type="text" name="name" placeholder="Имя Фамилия">
         </p>
         <p>
-          <label for="write_us_email">Ваш e-mail:</label>
-          <input id="write_us_email" type="email" name="email" placeholder="email@example.com">
+          <label class="popup_text" for="write_us_email">Ваш e-mail:</label>
+          <input class="input_style" id="write_us_email" type="email" name="email" placeholder="email@example.com">
         </p>
         <p>
-          <label for="write_us_text">Текст письма:</label>
-          <input id="write_us_text" type="text" name="write_text" placeholder="В свободной форме">
+          <label class="popup_text" for="write_us_text">Текст письма:</label>
+          <input class="input_style input_letter" id="write_us_text" type="text" name="write_text" placeholder="В свободной форме">
         </p>
-        <button type="submit">Отправить</button>
+        <button class="map_button popup_button" type="submit">Отправить</button>
       </form>
     </section>
   </body>
