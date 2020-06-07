@@ -8,27 +8,29 @@
     <link rel="stylesheet" href="../1251825-nerds-28/css/normalize.css" >
 
   </head>
-  <body>
-
-    <header class="main-header container-size">
+  <body class="page_body">
+    <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo">
-          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
-        </a>
-        <div class="container">
-        <ul class="site-navigation">
-          <li><a href="index.html">Студия</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li><a href="#">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <div class="user-navigation">
-          <a class="login-link" href="login.html"><img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">Корзина</a>
-        </div>
-       </nav>
+          <div class="container">
+            <a class="main-header-logo">
+              <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
+            </a>
+            <div class="main_navigation_wrapper">
+                <ul class="site-navigation">
+                  <li><a href="Index.html">Студия</a></li>
+                  <li><a href="#">Клиенты</a></li>
+                  <li><a class="active_page" href="Catalog.html">Магазин</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="user-navigation">
+                  <a class="login-link" href="login.html"><img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">Корзина</a>
+                </div>
+            </div>
+          </div>
+      </nav>
     </header>
 
-    <main>
+    <main class="page_catalog">
       <p class="slider-big catalog_title">Магазин готовых шаблонов</p>
       <section>
         <h2 class="visually-hidden">Форма</h2>
@@ -203,26 +205,31 @@
         <p class="friendship_content">Скидка 10% для друзей из социальных сетей.</p>
       </section>
     </footer>
-   
-    <section>
+    <!--
+    <section class="popup_container_wrapper">
+      <div class="popup_container">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <form   action="https://echo.htmlacademy.ru" method="post">
         <h2 class="popup_header">Напишите нам</h2>
         <button class="popup_close" type="button"></button>
-        <p>
-          <label class="popup_text" for="write_us_name">Ваше имя:</label>
-          <input class="input_style" id="write_us_name" type="text" name="name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label class="popup_text" for="write_us_email">Ваш e-mail:</label>
-          <input class="input_style" id="write_us_email" type="email" name="email" placeholder="email@example.com">
-        </p>
-        <p>
-          <label class="popup_text" for="write_us_text">Текст письма:</label>
-          <input class="input_style input_letter" id="write_us_text" type="text" name="write_text" placeholder="В свободной форме">
-        </p>
+        <div class="form_container">
+          <p class="popup_area">
+            <label class="popup_text" for="write_us_name">Ваше имя:</label>
+            <input class="input_style" id="write_us_name" type="text" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p class="popup_area">
+            <label class="popup_text" for="write_us_email">Ваш e-mail:</label>
+            <input class="input_style" id="write_us_email" type="email" name="email" placeholder="email@example.com">
+          </p>
+          <p class="popup_area">
+            <label class="popup_text" for="write_us_text">Текст письма:</label>
+            <input class="input_style input_letter" id="write_us_text" type="text" name="write_text" placeholder="В свободной форме">
+          </p>
+        </div>
         <button class="map_button popup_button" type="submit">Отправить</button>
       </form>
+      </div>
     </section>
+  -->
   </body>
 </html>

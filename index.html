@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
@@ -8,33 +8,44 @@
     <link rel="stylesheet" href="../1251825-nerds-28/css/normalize.css" >
   </head>
 
-  <body>
-    <header class="main-header container-size">
+  <body class="page_body">
+    <header class="main-header">
       <nav class="main-navigation">
-          <a class="main-header-logo">
-            <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
-          </a>
           <div class="container">
-            <ul class="site-navigation">
-              <li><a href="#">Студия</a></li>
-              <li><a href="#">Клиенты</a></li>
-              <li><a href="Catalog.html">Магазин</a></li>
-              <li><a href="#">Контакты</a></li>
-          </ul>
-          <div class="user-navigation">
-            <a class="login-link" href="login.html"><img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">Корзина</a>
+            <a class="main-header-logo">
+              <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
+            </a>
+            <div class="main_navigation_wrapper">
+                <ul class="site-navigation">
+                  <li><a class="active_page" href="#">Студия</a></li>
+                  <li><a href="#">Клиенты</a></li>
+                  <li><a href="Catalog.html">Магазин</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="user-navigation">
+                  <a class="login-link" href="login.html"><img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">Корзина</a>
+                </div>
+            </div>
           </div>
       </nav>
     </header>
 
-    <main>
-       <section class="slider-container container-size">
-          <h2 class="visually-hidden"> Слайдер</h2>
-          <p class="slider-big">Долго, дорого, скурпулезно</p>
-          <p>Математически выверенный дизайн  для вашего сайта или мобильного приложения</p>
-          <a class="gb_properties slider-button" href="#">Узнать больше</a>
-          <img src="img/nerds-index-slide1.png" width="760" height="431" alt="Изображение слайда 1">
-       </section>
+    <main class="main_container">
+      <section class="slider-container">
+        <div class="container">
+            <div class="slider_text">
+              <h2 class="visually-hidden"> Слайдер</h2>
+              <p class="slider-big">Долго, дорого, скрупулезно.</p>
+              <p class="slider-small">Математически выверенный дизайн <br> для вашего сайта или мобильного приложения</p>
+              <a class="gb_properties slider-button" href="#">Узнать больше</a>
+            </div>
+          <div class="slider_image">
+            <img src="img/nerds-index-slide1.png" width="760" height="431" alt="Изображение слайда 1">
+          </div>
+        </div>
+      </section>
+      
+      
      <!--
         <section class="slider-container container-size">
           <h2 class="visually-hidden">Слайдер</h2>
@@ -51,142 +62,166 @@
           <img src="img/nerds-index-slide3.png" width="759" heigth="411" alt="Изображение слайда 3">
        </section>
      -->
-      <section class="catalog-container container-size">
-        <h2 class="visually-hidden">Каталог</h2>
-        <ul>
-          <li>
-            <img src="img/illustration-1.svg" width="300" height="146" alt="Изображение Вэб-сайта">
-            <h3 class="catalog-item">Вэб-сайты</h3>
-            <p>Мир никогда не будет прежним после того как увидит наш сайт!</p>
-            <a class="gb_properties catalog-button button-red" href="#">Заказать</a>
-          </li>
-          <li>
-            <img src="img/illustration-2.svg" width="300" height="146" alt="Изображение приложения">
-            <h3 class="catalog-item">Приложения</h3>
-            <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-            <a class="gb_properties catalog-button button-green" href="#">Заказать</a>
-          </li>
-          <li>
-            <img src="img/illustration-3.svg" width="300" height="146" alt="Изображение презентации">
-            <h3 class="catalog-item">Презентации</h3>
-            <p> Вы даже не подозреваете, насколько вы изумительны!</p>
-            <a class="gb_properties catalog-button button-yellow" href="#">Заказать</a>
-          </li>
-        </ul>
-      </section>
-      <section class="description container-size">
-        <h2 class="visually-hidden">Описание</h2>
-        <p class="description-big">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-        <p>Исповедуем принципы минимализма и чистоты. Ставим математически</p>
-        <p class="description_order">Выполняем заказы на разработку:</p>
-        <ul class="description_list">
-          <li>Веб-сайтов любой сложности</li>
-          <li>Мобильных приложений для iOS и Android</li>
-          <li>Слайдшоу и видео для корпоративных презентаций</li>
-        </ul>
-        <div class="description_statistic">
-          <img src="img/nerds-illustration1.jpg" width="360" height="208" alt="Логотип Нёрдс">
-          <p class="description_order">С 2004 года Любим точность во всем:</p>
-          <ul class="description_list">
-            <li>
-              <span class="number">146 
-                <span class="sup_number"><sup >%</sup></span>
-              </span>
-              <p class="advantages">Уровень самоотдачи</p>
+      <section class="catalog-container">
+        <div class="container">
+          <h2 class="visually-hidden">Каталог</h2>
+          <ul class="catalog_items">
+            <li class="catalog_item_container">
+              <img src="img/illustration-1.svg" width="300" height="146" alt="Изображение Вэб-сайта">
+              <h3 class="catalog-item">Веб-сайты</h3>
+              <p>Мир никогда не будет прежним после того как увидит наш сайт!</p>
+              <a class="gb_properties catalog-button button-red" href="#">Заказать</a>
             </li>
-            <li>
-              <span class="number">100
-                <span class="sup_number"><sup>%</sup></span>
-              </span>
-              <p class="advantages">Уровень самоотдачи</p>
+            <li class="catalog_item_container">
+              <img src="img/illustration-2.svg" width="300" height="146" alt="Изображение приложения">
+              <h3 class="catalog-item">Приложения</h3>
+              <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+              <a class="gb_properties catalog-button button-green" href="#">Заказать</a>
             </li>
-            <li>
-              <span class="number">50
-                <span class="sup_number"><sup>%</sup></span>
-              </span>
-              <p class="advantages">Минимальная предоплата</p>
+            <li class="catalog_item_container">
+              <img src="img/illustration-3.svg" width="300" height="146" alt="Изображение презентации">
+              <h3 class="catalog-item">Презентации</h3>
+              <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+              <a class="gb_properties catalog-button button-yellow" href="#">Заказать</a>
             </li>
           </ul>
         </div>
       </section>
-      <section class="container-size">
+
+      <section class="description_container">
+        <div class="container">
+          <div class="description_text">
+            <h2 class="visually-hidden">Описание</h2>
+            <p class="description-big">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+            <p class="discription_small">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+            <p class="description_order">Выполняем заказы на разработку:</p>
+            <ul class="description_list">
+              <li>Веб-сайтов любой сложности</li>
+              <li>Мобильных приложений для iOS и Android</li>
+              <li>Слайдшоу и видео для корпоративных презентаций</li>
+            </ul>
+          </div>
+
+          <div class="description_statistic">
+            <img src="img/nerds-illustration1.jpg" width="360" height="208" alt="Логотип Нёрдс">
+            <p class="description_statistic_order">С 2004 года Любим точность во всем:</p>
+            <ul class="description_order_list">
+              <li>
+                <span class="number">146 
+                  <span class="sup_number"><sup>%</sup></span>
+                </span>
+                <p class="advantages">Уровень самоотдачи</p>
+              </li>
+              <li>
+                <span class="number">100
+                  <span class="sup_number"><sup>%</sup></span>
+                </span>
+                <p class="advantages">Соблюдение сроков</p>
+              </li>
+              <li>
+                <span class="number">50
+                  <span class="sup_number"><sup>%</sup></span>
+                </span>
+                <p class="advantages">Минимальная предоплата</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
         <h2 class="visually-hidden">Партнеры</h2>
-        <ul>
-          <li>
-            <img class="partner_logo" src="img/Group5.png" width="199" height="68" alt="Логотип HTML academy">
-          </li>
-          <li>
-            <img class="partner_logo" src="img/logo-2.png" width="209" height="90" alt="Логотип Барбершоп Бородинский">
-          </li>
-          <li>
-            <img  class="partner_logo" src="img/logo-3.png" width="185" height="52" alt="Логотип Пинк">
-          </li>
-          <li>
-            <img  class="partner_logo" src="img/logo-4.png" width="173" height="84" alt="Логотип Mishka">
-          </li>
-        </ul>
+          <ul class="partner_list">
+            <li class="partner">
+              <img class="partner_logo" src="img/Group5.png" width="199" height="68" alt="Логотип HTML academy">
+            </li>
+            <li class="partner">
+              <img class="partner_logo" src="img/logo-2.png" width="209" height="90" alt="Логотип Барбершоп Бородинский">
+            </li>
+            <li class="partner">
+              <img  class="partner_logo" src="img/logo-3.png" width="185" height="52" alt="Логотип Пинк">
+            </li>
+            <li class="partner">
+              <img  class="partner_logo" src="img/logo-4.png" width="173" height="84" alt="Логотип Mishka">
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <section>
+    <footer class="footer">
+      <section class="map">
         <h2 class="visually-hidden">Как нас найти</h2>
         <!--Карта-->
-        <img src="img/map1.jpg" width="1440" height="416" alt="Карта">
-        <div>
-          <p class="map_card_header">Nerds design studio</p>
-          <p class="card_text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-          тел. +7(812)275-75-75</p>
+        <div class="map_size" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/?bookmarks=true&from=api-maps&ll=30.315137%2C59.940224&mode=bookmarks&origin=jsapi_2_1_76&utm_medium=mapframe&utm_source=maps&z=15" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты — поиск мест и адресов, городской транспорт</a><iframe src="https://yandex.ru/map-widget/v1/-/CCQdRKbpsA" width="100%" height="416px" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+        <!--<img src="img/map1.jpg" width="1440" height="416" alt="Карта">-->
+        <div class="map_card">
+          <p class="map_card_header">Nёrds design studio</p>
+          <p class="card_text">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
+          <p class="phone">тел. +7(812)275-75-75</p>
           <button class="map_button" type="button">Напишите нам</button>
-          <!--
-            Псевдоэлемент
-            <img src="img/map-marker1.svg" width="231" heigth="190" alt="расположение офиса Nerds на карте">
-          -->
+        </div>
+        <div class="map_marker">
+          <img  src="img/map-marker1.svg" width="231" heigth="190" alt="расположение офиса Nerds на карте">
+        </div>      
+      </section>
+
+      <section class="social">
+        <div class="container">
+          <h2 class="visually-hidden">Странички в соц сетях</h2>
+          <!--<div class="logo_container">-->
+            <ul class="logo_element">
+              <li class="logo_background logo-vk">
+                <a href="#">
+                  <span class="visually-hidden">Vk</span>
+                </a>
+              </li>
+              <li class="logo_background logo-f">
+                <a href="#">
+                  <span class="visually-hidden">F</span>
+                </a>
+              </li>
+              <li class="logo_background logo-i">
+                <a href="#">
+                  <span class="visually-hidden">I</span>
+                </a>
+              </li>
+            </ul>
+          <!--</div>-->
+          <div class="logo_container_description">
+            <p class="friendship">Давайте дружить, это выгодно!</p>
+            <p class="friendship_content">Скидка 10% для друзей из социальных сетей.</p>
+          </div>
         </div>
       </section>
-      <section>
-        <h2 class="visually-hidden">Странички в соц сетях</h2>
-        <ul>
-          <li class="logo_background logo-vk">
-            <a href="#">
-              <span class="visually-hidden">Vk</span>
-            </a>
-          </li>
-          <li class="logo_background logo-f">
-            <a href="#">
-              <span class="visually-hidden">F</span>
-            </a>
-          </li>
-          <li class="logo_background logo-i">
-            <a href="#">
-              <span class="visually-hidden">I</span>
-            </a>
-            </li>
-        </ul>
-        <p class="friendship">Давайте дружить, это выгодно!</p>
-        <p class="friendship_content">Скидка 10% для друзей из социальных сетей.</p>
-      </section>
     </footer>
-    
-    <section>
+    <!--
+    <section class="popup_container_wrapper">
+      <div class="popup_container">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <form   action="https://echo.htmlacademy.ru" method="post">
         <h2 class="popup_header">Напишите нам</h2>
         <button class="popup_close" type="button"></button>
-        <p>
-          <label class="popup_text" for="write_us_name">Ваше имя:</label>
-          <input class="input_style" id="write_us_name" type="text" name="name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label class="popup_text" for="write_us_email">Ваш e-mail:</label>
-          <input class="input_style" id="write_us_email" type="email" name="email" placeholder="email@example.com">
-        </p>
-        <p>
-          <label class="popup_text" for="write_us_text">Текст письма:</label>
-          <input class="input_style input_letter" id="write_us_text" type="text" name="write_text" placeholder="В свободной форме">
-        </p>
+        <div class="form_container">
+          <p class="popup_area">
+            <label class="popup_text" for="write_us_name">Ваше имя:</label>
+            <input class="input_style" id="write_us_name" type="text" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p class="popup_area">
+            <label class="popup_text" for="write_us_email">Ваш e-mail:</label>
+            <input class="input_style" id="write_us_email" type="email" name="email" placeholder="email@example.com">
+          </p>
+          <p class="popup_area">
+            <label class="popup_text" for="write_us_text">Текст письма:</label>
+            <input class="input_style input_letter" id="write_us_text" type="text" name="write_text" placeholder="В свободной форме">
+          </p>
+        </div>
         <button class="map_button popup_button" type="submit">Отправить</button>
       </form>
+      </div>
     </section>
+  -->
+    
   </body>
 </html>
