@@ -23,7 +23,7 @@
                   <li><a href="#">Контакты</a></li>
                 </ul>
                 <div class="user-navigation">
-                  <a class="login-link" href="login.html"><img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">Корзина</a>
+                  <a class="login-link" href="login.html">Корзина</a>
                 </div>
             </div>
           </div>
@@ -40,58 +40,68 @@
       <div class="page_catalog container">
         <section class="filters">
           <h2 class="visually-hidden">Форма</h2>
+
           <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset>
+            <fieldset class="filter_ranges">
               <legend class="filter_text">Стоимость:</legend>
               <div class="price_filter">
-                <label for="min_rating"></label>
-                <input type="range" min="0" max="15000" step="1" id="rating" value="15000">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="width: 30%; margin-left: 20%"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0" style="left:20%"></div>
+                  <div class="toggle toggle-max" tabindex="0" style="left:50%"></div>
+                </div>
+                <div class="price-controls">
+                  <label for="min-price">
+                    от <input type="number" name="min-price" value="0"> 
+                  </label>
+                  <label for="maz-price">
+                    до <input type="number" name="max-price" value="15000"> 
+                  </label>
+                </div>
               </div>
-              <span class="filter_range">От</span>
-              <input class="filter_input" type="text" name="min_value_number" placeholder="0">
-              <span class="filter_range">До</span>
-              <input class="filter_input" type="text" name="max_value_number" placeholder="15000">
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter_radio">
               <legend class="filter_text">Сетка:</legend>
               <ul>
                 <li class="filter_item">
-                  <input type="radio" name="type_of_product" value="adaptive" id="net1">
+                  <input class="visually-hidden filter_input_radio" type="radio" name="type_of_product" value="adaptive" id="net1">
                   <label class="filter_option" for="net1">Адаптивная</label>
                 </li>
                 <li class="filter_item">
-                  <input type="radio" name="type_of_product" value="fixed" id="net1" checked>
-                  <label class="filter_option"for="net1">Фиксированная</label>
+                  <input class="visually-hidden filter_input_radio" type="radio" name="type_of_product" value="fixed" id="net1" checked>
+                  <label class="filter_option" for="net1">Фиксированная</label>
                 </li>
                 <li class="filter_item">
-                  <input type="radio" name="type_of_product" value="rubber" id="net1">
+                  <input class="visually-hidden filter_input_radio" type="radio" name="type_of_product" value="rubber" id="net1" disabled>
                   <label class="filter_option" for="net1">Резиновая</label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="filter_checkbox">
               <legend class="filter_text">Особенности:</legend>
               <ul>
                 <li class="filter_item2">
-                  <input type="checkbox" name="type_of_features" id="slider" checked>
+                  <input class="visually-hidden filter_input_checkbox" type="checkbox" name="type_of_features" id="slider" checked>
                   <label class="filter_option" class="filter_option" for="slider">Слайдер</label>
                 </li>
                 <li class="filter_item2">
-                  <input type="checkbox" name="type_of_plus" id="plus">
+                  <input class="visually-hidden filter_input_checkbox" type="checkbox" name="type_of_plus" id="plus">
                   <label class="filter_option" for="plus">Блок преимуществ</label>
                 </li>
                 <li class="filter_item2">
-                  <input type="checkbox" name="type_of_news" id="news" checked>
+                  <input class="visually-hidden filter_input_checkbox" type="checkbox" name="type_of_news" id="news" checked>
                   <label class="filter_option" for="news">Новости</label>
                 </li>
                 <li class="filter_item2">
-                  <input type="checkbox" name="type_of_gallery" id="gallery">
+                  <input class="visually-hidden filter_input_checkbox" type="checkbox" name="type_of_gallery" id="gallery">
                   <label class="filter_option" for="gallery">Галерея</label>
                 </li>
                 <li class="filter_item2">
-                  <input type="checkbox" name="type_of_basket" id="basket">
+                  <input class="visually-hidden filter_input_checkbox" type="checkbox" name="type_of_basket" id="basket" checked disabled>
                   <label class="filter_option" for="basket">Корзина</label>
                 </li>
               </ul>
@@ -99,6 +109,7 @@
             <button class="filter_button button_text" type="submit">Показать</button>
           </form>
         </section>
+
         <div class="catalog_container">
           <section class="sorting_system_container">
             <h2 class="visually-hidden">Сортировка</h2>
@@ -113,7 +124,11 @@
               <li class="sorting_element">
                 <a class="sorting_system" href="#">По названию</a>
               </li>
+              <li class="sorting_element">
+                <a class="sorting_system arrow" href="#"></a>
+              </li>
             </ul>
+
         
           <!--кнопки-->
           </section>
@@ -124,13 +139,13 @@
                 <a href="#">
                   <img src="img/Goods1.jpg" width="358" height="580" alt="Сайт Седона">
                 </a>
-                <!--
                 <div class="card">
                   <p class="filter_text">Sedona</p>
                   <p class="card_content">Информационный сайт для туристов</p>
                   <a class="gb_properties price_button" href="#">9900 &#8381;</a>
-                </div>-->
+                </div>
               </li>
+              
               <li class="good">
                 <a href="#">
                   <img src="img/Goods2.jpg" width="358" height="578" alt="Сайт Pink">
