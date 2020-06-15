@@ -23,7 +23,7 @@
                   <li><a href="#">Контакты</a></li>
                 </ul>
                 <div class="user-navigation">
-                  <a class="login-link" href="login.html"><img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">Корзина</a>
+                  <a class="login-link" href="login.html">Корзина</a>
                 </div>
             </div>
           </div>
@@ -31,37 +31,42 @@
     </header>
 
     <main class="main_container">
+
       <section class="slider-container">
         <div class="container">
-            <div class="slider_text">
-              <h2 class="visually-hidden"> Слайдер</h2>
-              <p class="slider-big">Долго, дорого, скрупулезно.</p>
-              <p class="slider-small">Математически выверенный дизайн <br> для вашего сайта или мобильного приложения</p>
-              <a class="gb_properties slider-button" href="#">Узнать больше</a>
+            <ul class="slider_list">
+              <li class="slider_content slide slide_current">
+                <div class="slider_text site-wrapper-1">
+                  <h2 class="visually-hidden"> Слайдер</h2>
+                  <p class="slider-big">Долго, дорого, скрупулезно.</p>
+                  <p class="slider-small">Математически выверенный дизайн <br> для вашего сайта или мобильного приложения</p>
+                  <a class="gb_properties slider-button" href="#">Узнать больше</a>
+                </div>
+              </li>
+              <li class="slider_content slide">
+                <div class="slider_text site-wrapper-2">
+                  <h2 class="visually-hidden"> Слайдер</h2>
+                  <p class="slider-big">Любим математику как никто другой</p>
+                  <p class="slider-small">Никакого креатива, только математические формулы <br> для расчета идеальных пропорций.</p>
+                  <a class="gb_properties slider-button" href="#">Узнать больше</a>
+                </div>
+              </li>
+              <li class="slider_content slide">
+                <div class="slider_text site-wrapper-3">
+                  <h2 class="visually-hidden"> Слайдер</h2>
+                  <p class="slider-big">Только ночь, только хардкор</p>
+                  <p class="slider-small">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+                  <a class="gb_properties slider-button" href="#">Узнать больше</a>
+                </div>
+              </li>
+            </ul>
+            <div class="slider_control">
+              <button class="current"  type="button" aria-label="Первый слайд"></button>
+              <button type="button" aria-lebel="Второй слайд"></button>
+              <button type="button" aria-label="Третий слайд"></button>
             </div>
-          <div class="slider_image">
-            <img src="img/nerds-index-slide1.png" width="760" height="431" alt="Изображение слайда 1">
-          </div>
         </div>
       </section>
-      
-      
-     <!--
-        <section class="slider-container container-size">
-          <h2 class="visually-hidden">Слайдер</h2>
-          <p>Любим математику как никто другой</p>
-          <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-          <a href="#">Узнать больше</a>
-          <img src="img/nerds-index-slide2.png" width="663" heigth="430" alt="Изображение слайда 2">
-       </section>
-       <section class="slider-container container-size">
-          <h2 class="visually-hidden">Слайдер</h2>
-          <p>Только ночь, только хардкор</p>
-          <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-          <a href="#">Узнать больше</a>
-          <img src="img/nerds-index-slide3.png" width="759" heigth="411" alt="Изображение слайда 3">
-       </section>
-     -->
       <section class="catalog-container">
         <div class="container">
           <h2 class="visually-hidden">Каталог</h2>
@@ -129,7 +134,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="partner_logo_container">
         <div class="container">
         <h2 class="visually-hidden">Партнеры</h2>
           <ul class="partner_list">
