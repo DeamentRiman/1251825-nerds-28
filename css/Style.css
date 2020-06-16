@@ -1070,13 +1070,14 @@ ul{
     padding:0;
 }
 .sorting_system_container p{
-    margin-right: 266px;
+    margin-right: 263px;
 }
 .sorting_element{
     margin:0;
     padding:0;
     margin-right: 26px;
     position: relative;
+    outline: 1px solid green;
 }
 .sorting_system{
     font-size: 14px;
@@ -1086,13 +1087,40 @@ ul{
     opacity: 0.3;
     margin:0;
     padding:0;
+    outline: 1px solid red;
 }
-.arrow::before{
+.sorting_element .arrow{
+    outline: 1px solid blue;
+}
+.sorting_element .arrow::before{
     content: "";
     position: absolute;
-    width: 10px;
+    width: 14px;
     height: 10px;
-    background-color: var(--basic-ligth-grey);
+    top: -5px;
+    left: 20px;
+    background-image: url(../img/icon-down-dir.svg);
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    /*outline: 1px solid red;*/
+}
+
+.sorting_element .arrow::after{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 10px;
+    top: -5px;
+    left: 49px;
+    background-image: url(../img/icon-up-dir.svg);
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    /*outline: 1px solid blueviolet;*/
+}
+.sorting_element .arrow:hover::before,
+.sorting_element .arrow:hover::after{
+    opacity: 1;
+    /*outline: 1px solid red;*/
 }
 .sorting_system:hover{
     opacity: 0.6;
@@ -1100,6 +1128,12 @@ ul{
 .sorting_system:active{
     opacity: 1;
 }
+.catalog_container{
+    margin:0;
+    padding:0;
+    margin-left: 119px;
+}
+
 
 /*Good*/
 .main_catalog{
@@ -1107,6 +1141,14 @@ ul{
     padding: 0;
     margin-top: 88px;
     padding-left: 2px;
+}
+.catalog_list{
+    display: flex;
+    flex-wrap: wrap;
+    padding:0;
+    margin:0;
+    list-style: none;
+    position: relative;
 }
 .good{
     position: relative;
@@ -1120,6 +1162,11 @@ ul{
     border: 1px solid var(--basic-header);
     z-index: 5;
 }
+.good .good_card{
+    width: 358px;
+    height: 576px;
+    margin: 0;
+}
 .good:nth-child(2n){
     margin-right: 0px;
 }
@@ -1127,16 +1174,8 @@ ul{
 .good:last-child{
     margin-bottom: 0;
 }
-.good:hover{
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    z-index: 2;
-}
-.good a{
-    width: 358px;
-    height: 576px;
-    margin: 0;
-}
-.good a::before{
+
+.good .good_card::before{
     content: "";
     position: absolute;
     width: 360px;
@@ -1147,7 +1186,7 @@ ul{
     top:-40px;
     left: -1px;
 }
-.good a::after{
+.good .good_card::after{
     content: "";
     position: absolute;
     width: 14px;
@@ -1158,40 +1197,35 @@ ul{
     top: -27px;
     box-shadow: 24px 0 0 0 var(--basic-white), -24px 0 0 0 var(--basic-white);
 }
-.good a:hover::before{
-    background-color: var(--basic-matterhorn);
-}
-.catalog_container{
-    margin:0;
-    padding:0;
-    margin-left: 119px;
-   /*outline: 5px solid black;
-    outline-offset: -5px;*/
-}
-.catalog_list{
-    display: flex;
-    flex-wrap: wrap;
-    padding:0;
-    margin:0;
-    list-style: none;
-    position: relative;
+.good:hover{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    z-index: 2;
 }
 
-.card{
-    content:"";
-    position: absolute;
-    z-index: 0;
+.good .good_card:hover::before{
+    background-color: var(--basic-matterhorn);
 }
+.card{
+    content: "";
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 358px;
+    height: 231px;
+    background-color: var(--basic-header);
+    text-align: center;
+    z-index: -1;
+}
+.good:hover .card{
+    z-index: 10;
+}
+
+/*
 .card:hover{
     content: "";
     position: absolute;
     display: block;
-    width: 358px;
-    height: 231px;
-    bottom:0;
-    left:0;
-    background-color: var(--basic-header);
-    text-align: center;
+    
     z-index: 20;
 }/*
 .card .filter_text:hover{
@@ -1205,10 +1239,10 @@ ul{
     font-size: 16px;
     line-height: 18px;
     text-align: center;
-}
+}*/
 .price_button{
-    width: 200px;
-    height: 50px;
+    margin: 0;
+    padding: 17px 72px 15px 72px;
     background-color: var(--basic-wild-watermelon);
 }
 .price_button:hover{
@@ -1217,7 +1251,7 @@ ul{
 .price_button:active{
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
     color: var(--basic-white);
-}*/
+}
 .catalog_page{
     display: flex;
     flex-direction: row;
