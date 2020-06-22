@@ -44,7 +44,7 @@ body{
     min-width: 1160px;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto',  'Arial', sans-serif;
     font-size: 16px;
     line-height: 24px;
     color: var(--basic-cod-grey);
@@ -687,14 +687,17 @@ ul{
     display: none;
     position: relative;
 }
+.popup_visible{
+    display: block;
+}
 .popup_container{
     display: block;
     width: 960px;
-    height: 590px;
+    /*height: 590px;*/
     background-color: var(--basic-white);
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
     position: fixed;
-    top: 50%;
+    top: 25%;
     left: 25%;
 }
 
@@ -757,7 +760,9 @@ ul{
     color: var(--basic-black);
     margin-bottom: 9px;
 }
-.input_style{
+.input_style,
+.input_style_name,
+.input_style_email{
     line-height: 18px;
     color: var(--basic-charcoal);
     border: 2px solid var(--basic-patterns-blue);
@@ -766,10 +771,14 @@ ul{
     height: 50px;
     opacity: 0.5;
 }
-.input_style:valid:hover{
+.input_style:valid:hover,
+.input_style_name:hover,
+.input_style_email:hover{
     border: 2px solid var(--basic-heather);
 }
-.input_style:valid:focus{
+.input_style:valid:focus,
+.input_style_name:valid:focus,
+.input_style_email:valid:focus{
     border: 2px solid var(--basic-black);
     opacity: 1;
 }
@@ -788,6 +797,13 @@ ul{
     margin-top: 47px;
     margin-bottom: 74px;
 }
+.popup_show{
+    display: block;
+    animation: bounce 0.6s;
+}
+.popup_container_wrapper {
+    animation: shake 0.6s;
+  }
 
 /*Catalog.html*/
 .catalog_title_container{
@@ -1335,4 +1351,20 @@ ul{
 /*Grid*/
 
 /*Пробный слайдер*/
-
+@keyframes bounce {
+    0% {
+      transform: translateY(-2000px);
+    }
+  
+    70% {
+      transform: translateY(30px);
+    }
+  
+    90% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
