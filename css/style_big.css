@@ -1114,17 +1114,11 @@ img {
 }
 .arrow:hover::before,
 .arrow:hover::after{
-    opacity: 1;
-}
-.arrow:active::before{
-    background-image: url(../img/icon-down-dir_dark.svg);
-}
-.arrow:active::after{
-    background-image: url(../img/icon-up-dir_dark.svg);
+    opacity: 0.4;
 }
 .arrow:active::before,
 .arrow:active::after{
-    border: 1px solif black;
+    opacity: 1;
 }
 .sorting_system:hover{
     opacity: 0.6;
