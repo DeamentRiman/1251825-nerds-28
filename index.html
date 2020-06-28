@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="../1251825-nerds-28/css/Style.css" rel="stylesheet">
     <link rel="stylesheet" href="../1251825-nerds-28/css/normalize.css" >
+    <link href="../1251825-nerds-28/css/style.css" rel="stylesheet">
   </head>
 
   <body class="page_body">
@@ -19,7 +19,7 @@
                 <ul class="site-navigation">
                   <li><a class="active_page" href="#">Студия</a></li>
                   <li><a href="#">Клиенты</a></li>
-                  <li><a href="Catalog.html">Магазин</a></li>
+                  <li><a href="catalog.html">Магазин</a></li>
                   <li><a href="#">Контакты</a></li>
                 </ul>
                 <div class="user-navigation">
@@ -35,7 +35,7 @@
       <section class="slider-container">
         <div class="container">
             <ul class="slider_list">
-              <li class="slider_content slide slide_current">
+              <li class="slider_content slide1 slide_current">
                 <div class="slider_text site-wrapper-1">
                   <h2 class="visually-hidden"> Слайдер</h2>
                   <p class="slider-big">Долго, дорого, скрупулезно.</p>
@@ -43,7 +43,7 @@
                   <a class="gb_properties slider-button" href="#">Узнать больше</a>
                 </div>
               </li>
-              <li class="slider_content slide">
+              <li class="slider_content slide2">
                 <div class="slider_text site-wrapper-2">
                   <h2 class="visually-hidden"> Слайдер</h2>
                   <p class="slider-big">Любим математику как никто другой</p>
@@ -51,19 +51,19 @@
                   <a class="gb_properties slider-button" href="#">Узнать больше</a>
                 </div>
               </li>
-              <li class="slider_content slide">
+              <li class="slider_content slide3">
                 <div class="slider_text site-wrapper-3">
                   <h2 class="visually-hidden"> Слайдер</h2>
-                  <p class="slider-big">Только ночь, только хардкор</p>
-                  <p class="slider-small">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+                  <p class="slider-big">Только ночь, <br> только хардкор</p>
+                  <p class="slider-small">Работать днем, как все? Мы против этого. <br> Ближе к полуночи работа только начинается.</p>
                   <a class="gb_properties slider-button" href="#">Узнать больше</a>
                 </div>
               </li>
             </ul>
             <div class="slider_control">
-              <button class="current"  type="button" aria-label="Первый слайд"></button>
-              <button type="button" aria-lebel="Второй слайд"></button>
-              <button type="button" aria-label="Третий слайд"></button>
+              <button class="first_slide current"  type="button" aria-label="Первый слайд"></button>
+              <button class="second_slide" type="button" aria-label="Второй слайд"></button>
+              <button class="third_slide" type="button" aria-label="Третий слайд"></button>
             </div>
         </div>
       </section>
@@ -92,7 +92,6 @@
           </ul>
         </div>
       </section>
-
       <section class="description_container">
         <div class="container">
           <div class="description_text">
@@ -133,13 +132,14 @@
           </div>
         </div>
       </section>
-
       <section class="partner_logo_container">
         <div class="container">
         <h2 class="visually-hidden">Партнеры</h2>
           <ul class="partner_list">
             <li class="partner">
+              <a href="https://htmlacademy.ru/intensive/htmlcss">
               <img class="partner_logo" src="img/Group5.png" width="199" height="68" alt="Логотип HTML academy">
+              </a>
             </li>
             <li class="partner">
               <img class="partner_logo" src="img/logo-2.png" width="209" height="90" alt="Логотип Барбершоп Бородинский">
@@ -154,26 +154,24 @@
         </div>
       </section>
     </main>
-
     <footer class="footer">
       <section class="map">
         <h2 class="visually-hidden">Как нас найти</h2>
-        <div class="map_size"><iframe src="https://yandex.ru/map-widget/v1/-/CCQdRKbpsA" width="100%" height="416px" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
+        <div class="map_size"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5924505699534!2d30.31627750309954!3d59.93890458370059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1592841059106!5m2!1sru!2sru" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
         <div class="map_card">
           <p class="map_card_header">Nёrds design studio</p>
           <p class="card_text">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
-          <p class="phone">тел. +7(812)275-75-75</p>
-          <button class="map_button" type="button">Напишите нам</button>
+          <p class="phone"><a href="tel:+78122757575">тел. +7(812)275-75-75</a></p>
+          <a href="write_us.html" class="map_button">Напишите нам</a>
         </div>
         <div class="map_marker">
-          <img  src="img/map-marker1.svg" width="231" heigth="190" alt="расположение офиса Nerds на карте">
+          <img  src="img/map-marker1.svg" width="231" height="190" alt="расположение офиса Nerds на карте">
         </div>      
       </section>
 
       <section class="social">
         <div class="container">
           <h2 class="visually-hidden">Странички в соц сетях</h2>
-          <!--<div class="logo_container">-->
             <ul class="logo_element">
               <li class="logo_background logo-vk">
                 <a href="#">
@@ -191,7 +189,6 @@
                 </a>
               </li>
             </ul>
-          <!--</div>-->
           <div class="logo_container_description">
             <p class="friendship">Давайте дружить, это выгодно!</p>
             <p class="friendship_content">Скидка 10% для друзей из социальных сетей.</p>
@@ -199,7 +196,6 @@
         </div>
       </section>
     </footer>
-    
     <section class="popup_container_wrapper">
       <div class="popup_container">
       <h2 class="visually-hidden">Напишите нам</h2>
@@ -224,7 +220,6 @@
       </form>
       </div>
     </section>
-  
-  <script src="../1251825-nerds-28/js/Write_us.js"></script>
+  <script src="../1251825-nerds-28/js/write_us.js"></script>
   </body>
 </html>
